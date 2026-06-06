@@ -2,7 +2,7 @@ provider "aws" {
   region = "eu-west-1"
 }
 module "webserver-cluster" {
-  source  = "../../../modules/services/webserver-cluster"
+  source  = "https://github.com/shabeer22vsb/modules//services/webserver-cluster?ref=v.0.0.1"
   cluster_name = "PRODUCTION"
   db_remote_state_bucket = "my-tf-practical-bucket-166373406634-eu-west-1-an"
   db_remote_state_key = "stage/data-stores/prod/mysql/terraform.tfstate"
